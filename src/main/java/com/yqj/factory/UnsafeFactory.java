@@ -1,4 +1,4 @@
-package com.yqj.juc.factory;
+package com.yqj.factory;
 
 import sun.misc.Unsafe;
 

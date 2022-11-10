@@ -1,4 +1,4 @@
-package com.yqj.juc.jmm;
+package com.yqj.jmm;
 
 /**
  * volatile可见性

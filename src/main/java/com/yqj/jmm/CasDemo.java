@@ -1,4 +1,4 @@
-package com.yqj.juc.jmm;
+package com.yqj.jmm;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicStampedReference;
@@ -24,18 +24,29 @@ public class CasDemo implements Runnable {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        CasDemo casDemo = new CasDemo();
-        casDemo.value = 0;
-        Thread t1 = new Thread(casDemo,"t1");
-        Thread t2 = new Thread(casDemo,"t2");
-        t1.start();
-        t2.start();
-        t1.join();
-        t1.join();
+//        CasDemo casDemo = new CasDemo();
+//        casDemo.value = 0;
+//        Thread t1 = new Thread(casDemo,"t1");
+//        Thread t2 = new Thread(casDemo,"t2");
+//        t1.start();
+//        t2.start();
+//        t1.join();
+//        t1.join();
+        System.out.println(test(0));
     }
 
     @Override
     public void run() {
         compareAndSwap(0,1);
+    }
+
+
+    public static  int test(int i){
+        try{
+            i++;
+            return i;
+        }finally {
+            i++;
+        }
     }
 }

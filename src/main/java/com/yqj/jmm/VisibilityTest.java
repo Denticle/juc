@@ -1,6 +1,6 @@
-package com.yqj.juc.jmm;
+package com.yqj.jmm;
 
-import com.yqj.juc.factory.UnsafeFactory;
+import com.yqj.factory.UnsafeFactory;
 
 /**
  * 并发可见性

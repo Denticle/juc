@@ -1,4 +1,4 @@
-package com.yqj.juc.jmm;
+package com.yqj.jmm;
 /**
  * volatile不保证原子性
  * 将num使用10个线程进行++
